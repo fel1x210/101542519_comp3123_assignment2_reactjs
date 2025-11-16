@@ -1,0 +1,17 @@
+{
+  "name": "comp3123-assignment1-fullstack",
+  "version": "1.0.0",
+  "description": "Employee & User Management - Full Stack Application",
+  "private": true,
+  "scripts": {
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "build:frontend": "cd frontend && npm run build"
+  },
+  "keywords": ["react", "express", "mongodb", "fullstack"],
+  "author": "Nguyen Minh Triet Luu",
+  "license": "ISC"
+}
