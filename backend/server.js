@@ -37,14 +37,26 @@ app.get("/api/health", (req, res) => {
     })
 })
 
-// Connect to MongoDB
-mongoose.connect(DB_CONNECTION_STRING)
+// Connect to MongoDB with better configuration for Vercel
+mongoose.connect(DB_CONNECTION_STRING, {
+    serverSelectionTimeoutMS: 5000,
+    socketTimeoutMS: 45000,
+})
     .then(() => {
         console.log("Connected to the database")
     })
     .catch((err) => {
         console.log("Cannot connect to the database", err)
     })
+
+// Ensure MongoDB is ready before handling requests
+mongoose.connection.on('connected', () => {
+    console.log('MongoDB connected successfully');
+});
+
+mongoose.connection.on('error', (err) => {
+    console.error('MongoDB connection error:', err);
+});
 
 // Export the app for Vercel
 module.exports = app;
