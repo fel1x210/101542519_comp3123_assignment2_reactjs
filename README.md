@@ -3,7 +3,7 @@
 **Student Name**: Nguyen Minh Triet Luu  
 **Student ID**: 101542519  
 **Course**: COMP3123 
-**Assignment**: Assignment 1 
+**Assignment**: Assignment 2
 
 ## 📁 Project Structure
 
