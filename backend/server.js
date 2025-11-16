@@ -6,7 +6,7 @@ const userRoutes = require('./routes/user');
 const employeeRoutes = require('./routes/employee');
 
 const SERVER_PORT = process.env.PORT || 3000;
-const DB_CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb+srv://luunguyenminhtriet021025_db_user:fellix021025@cluster0.7v6gqw3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const DB_CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb+srv://luunguyenminhtriet021025_db_user:fellix021025@cluster0.7v6gqw3.mongodb.net/employeeDB?retryWrites=true&w=majority&appName=Cluster0';
 
 // Middleware
 app.use(cors()); // Enable CORS for all routes
